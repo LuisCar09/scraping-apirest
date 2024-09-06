@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Middleware para manejar datos de formularios URL-encoded
 app.use(express.urlencoded({ extended: true }));
-```
+
 - Puedes hacer tu proyecto todo lo modular que quieras.
 
 ## El ejercicio se compone de 2 partes
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 Extraer información relevante de las últimas noticias en la página de El País.
 - Conseguiremos los datos de imagen, enlace, titulo y descripción de la noticia y guardaremos en un array cada objeto con el siguiente formato:
 
-```javascript 
+javascript 
   let noticias = [];
   const noticia = {
     titulo: titulo,
