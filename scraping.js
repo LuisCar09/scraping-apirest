@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('node:fs')
 const url = 'https://elpais.com/ultimas-noticias/'
-
+let counter = 0
 
 
 const noticias =[];
@@ -17,6 +17,7 @@ try{
         
         $('.b-st_a').find('article').each((index, element)=>{
             const noticia = {
+                id:  counter++,
                 titulo: $(element).find('h2').text(),
                 imagen: $(element).find('img').attr('src'),
                 descripcion: $(element).find('p').text(),
